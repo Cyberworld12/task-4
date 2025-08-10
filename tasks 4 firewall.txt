@@ -1,0 +1,41 @@
+TOOLS USED:
+
+    Operating System: Ubuntu
+
+    Firewall Tool: UFW (Uncomplicated Firewall)
+
+    Terminal Command Line Interface
+    
+    TASKS COMPLETED & COMMANDS USED:
+    Check Firewall Status:  sudo ufw status
+   
+    Enable Firewall: sudo ufw enable
+
+    View Firewall Rules: sudo ufw status verbose
+
+    Block Inbound Traffic on Port 23 : sudo ufw deny 23
+    
+    Test Port 23 Block Using Telnet: telnet localhost 23
+
+    Allow SSH (Port 22): sudo ufw allow 22
+ 
+     Remove Test Rule (Unblock Port 23): sudo ufw delete deny 23
+
+     SUMMARY: HOW UFW FIREWALL FILTERS TRAFFIC
+
+UFW (Uncomplicated Firewall) acts as a user-friendly interface for iptables, making it easier to define rules.
+
+   - Default Policy: Deny all incoming, allow outgoing
+
+    Rule Example:
+
+       - allow 22 → Opens SSH port
+
+        -deny 23 → Blocks Telnet port
+
+    -Inbound Rules: Protect against unwanted access
+
+    -Outbound Rules (less commonly used): Restrict internal access to external services
+
+Firewall rules help enforce the principle of least privilege by only allowing necessary traffic.
+
